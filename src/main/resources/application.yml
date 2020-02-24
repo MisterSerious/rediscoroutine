@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: rediscoroutine
+
+redis:
+  uri: redis://localhost
+  caches:
+    example:
+      expire-after-write: 15m
+      key-serializer: "io.micronaut.jackson.serialize.JacksonObjectSerializer"
+      value-serializer: "io.micronaut.jackson.serialize.JacksonObjectSerializer"
